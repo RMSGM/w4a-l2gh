@@ -15,7 +15,7 @@ $(function () {
 function onRead() {
     console.log('reading RMS-Account..'); //...
 
-    $.get("http://195.50.2.67:2403/rms-account/", function (response) {
+    $.get("http://ipaddr:2403/rms-account/", function (response) {
             console.log("get - get success");
 
             var resultTBody = document.createElement('tbody');
@@ -77,7 +77,7 @@ function onRead() {
         }
     });
 
-    xhr.open("GET", "http://195.50.2.67:2403/rms-account"); //...
+    xhr.open("GET", "http://ipaddr:2403/rms-account"); //...
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send();*/
 }
@@ -130,7 +130,7 @@ function onCreate(ev) {
         }
     });
 
-    xhr.open("POST", "http://195.50.2.67:2403/rms-account"); //...
+    xhr.open("POST", "http://ipaddr:2403/rms-account"); //...
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(data);
 }
@@ -161,7 +161,7 @@ function onPrepareUpdate(ev) {
         }
     });
 
-    xhrids.open("GET", "http://195.50.2.67:2403/rms-account/"); //...
+    xhrids.open("GET", "http://ipaddr:2403/rms-account/"); //...
     xhrids.setRequestHeader("Content-Type", "application/json");
     xhrids.send();
 }
@@ -189,7 +189,7 @@ function onUpdate(ev) {
         }
     });
 
-    xhr.open("PUT", "http://195.50.2.67:2403/rms-account/" + document.getElementById("uid").value); //...
+    xhr.open("PUT", "http://ipaddr:2403/rms-account/" + document.getElementById("uid").value); //...
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send(data);
 }
@@ -207,7 +207,7 @@ function onDelete(ev) {
         }
     });
 
-    xhr.open("DELETE", "http://195.50.2.67:2403/rms-account/" + document.getElementById("did").value); //..
+    xhr.open("DELETE", "http://ipaddr:2403/rms-account/" + document.getElementById("did").value); //..
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.send();
 }
